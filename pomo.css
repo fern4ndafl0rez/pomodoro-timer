@@ -11,6 +11,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     padding: 20px;
     background: transparent;
+    min-width: 200px;
+    max-width: 100%;
 }
 
 .timer-circle {
@@ -23,6 +25,79 @@ body {
     transform: rotate(-90deg);
 }
 
+.timer-circle circle {
+    fill: none;
+    stroke-width: 8;
+}
+
+.timer-background {
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+.timer-progress {
+    stroke: #8C735D;
+    transition: stroke-dashoffset 1s linear;
+}
+
+.timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    font-weight: bold;
+    color: inherit;
+}
+
+.timer-label {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #8C735D;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px;
+    flex-direction: row;
+}
+
+@media (max-width: 400px) {
+    .controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+button {
+    background-color: #8C735D;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #6d5847;
+}
 .timer-circle circle {
     fill: none;
     stroke-width: 8;
